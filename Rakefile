@@ -8,7 +8,7 @@ RubyCritic::RakeTask.new do |task|
   task.options = %(--custom-format RubyCriticSmallBadge::Report
 --minimum-score #{RubyCriticSmallBadge.config.minimum_score}
 --format html --format console)
-  task.paths = FileList['ruby/*.rb','src/*.rb','spec/*.rb']
+  task.paths = FileList['src/*.rb','src/types/*.rb']
 end
 
 task default: :rubycritic

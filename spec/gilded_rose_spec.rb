@@ -70,7 +70,7 @@ describe GildedRose do
       GildedRose.new(items).update_quality()
       expect(items[0].quality).to eq 43
     end
-    it "quality when it get to sell-in" do
+    it "quality goes to 0 when it get to sell-in" do
       items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 0, 40)]
       GildedRose.new(items).update_quality()
       expect(items[0].quality).to eq 0
