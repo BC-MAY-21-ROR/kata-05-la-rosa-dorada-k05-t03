@@ -8,9 +8,9 @@ class GildedRose
     @items.each do |item|
       if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
         if item.quality > 0
-          if item.name != "Sulfuras, Hand of Ragnaros" and item.name != "Conjured Mana Cake"
+          if item.name != "Sulfuras, Hand of Ragnaros"
             item.quality = item.quality - 1
-          else
+          elsif item.name == "Conjured Mana Cake"
             item.quality = item.quality - 2
           end
         end
@@ -66,5 +66,26 @@ class Item
 
   def to_s()
     "#{@name}, #{@sell_in}, #{@quality}"
+  end
+end
+
+
+class AgedBrie
+  def update_quality
+  end
+end
+
+class BackstagePasses
+  def update_quality
+  end
+end
+
+class Sulfuras
+  def update_quality
+  end
+end
+
+class Conjured
+  def update_quality
   end
 end
